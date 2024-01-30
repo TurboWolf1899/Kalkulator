@@ -27,35 +27,35 @@ namespace Kalkulator
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             // Zbrajanje
-            double zbroj = Convert.ToDouble(textBox1.Text) + Convert.ToDouble(textBox2.Text);
+            int zbroj = Convert.ToInt32(textBox1.Text) + Convert.ToInt32(textBox2.Text);
             textBlock1.Text = zbroj.ToString();
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             // Oduzimanje
-            double razlika = Convert.ToDouble(textBox1.Text) - Convert.ToDouble(textBox2.Text);
+            int razlika = Convert.ToInt32(textBox1.Text) - Convert.ToInt32(textBox2.Text);
             textBlock1.Text = razlika.ToString();
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
             // Množenje
-            double umnozak = Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox2.Text);
+            int umnozak = Convert.ToInt32(textBox1.Text) * Convert.ToInt32(textBox2.Text);
             textBlock1.Text = umnozak.ToString();
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
             // Dijeljenje
-            double kolicnik = Convert.ToDouble(textBox1.Text) / Convert.ToDouble(textBox2.Text);
+            int kolicnik = Convert.ToInt32(textBox1.Text) / Convert.ToInt32(textBox2.Text);
             textBlock1.Text = kolicnik.ToString();
         }
 
         private void Radio1_Checked(object sender, RoutedEventArgs e)
         {
             // DEC
-            textBlock1.Text = Convert.ToDouble(textBlock1.Text).ToString();
+            textBlock1.Text = Convert.ToInt32(textBlock1.Text).ToString();
         }
 
         private void Radio2_Checked(object sender, RoutedEventArgs e)
