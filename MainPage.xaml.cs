@@ -17,9 +17,6 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Kalkulator
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -29,58 +26,57 @@ namespace Kalkulator
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            //zbrajanje
-            double zbroj= Convert.ToDouble(textBox1.Text)+Convert.ToDouble(textBox2.Text);
+            // Zbrajanje
+            double zbroj = Convert.ToDouble(textBox1.Text) + Convert.ToDouble(textBox2.Text);
             textBlock1.Text = zbroj.ToString();
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-            //oduzimanje
+            // Oduzimanje
             double razlika = Convert.ToDouble(textBox1.Text) - Convert.ToDouble(textBox2.Text);
             textBlock1.Text = razlika.ToString();
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-            //mnonženje
+            // Množenje
             double umnozak = Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox2.Text);
             textBlock1.Text = umnozak.ToString();
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-            //dijeljenje
+            // Dijeljenje
             double kolicnik = Convert.ToDouble(textBox1.Text) / Convert.ToDouble(textBox2.Text);
             textBlock1.Text = kolicnik.ToString();
         }
 
         private void Radio1_Checked(object sender, RoutedEventArgs e)
         {
-            //DEC
-            Convert.ToString(textBlock1.Text);
-            Console.WriteLine(textBlock1.Text);
+            // DEC
+            textBlock1.Text = Convert.ToDouble(textBlock1.Text).ToString();
         }
 
         private void Radio2_Checked(object sender, RoutedEventArgs e)
         {
-            //BIN
-            Convert.ToString(textBlock1.Text);
-            Console.WriteLine(textBlock1.Text, 2);
+            // BIN
+            int decimalnaVrijednost = Convert.ToInt32(textBlock1.Text);
+            textBlock1.Text = Convert.ToString(decimalnaVrijednost, 2);
         }
 
         private void Radio3_Checked(object sender, RoutedEventArgs e)
         {
-            //OCT
-            Convert.ToString(textBlock1.Text);
-            Console.WriteLine(textBlock1.Text, 8);
+            // OCT
+            int decimalnaVrijednost = Convert.ToInt32(textBlock1.Text);
+            textBlock1.Text = Convert.ToString(decimalnaVrijednost, 8);
         }
 
         private void Radio4_Checked(object sender, RoutedEventArgs e)
         {
-            //HEX
-            Convert.ToString(textBlock1.Text);
-            Console.WriteLine(textBlock1.Text, 16);
+            // HEX
+            int decimalnaVrijednost = Convert.ToInt32(textBlock1.Text);
+            textBlock1.Text = Convert.ToString(decimalnaVrijednost, 16);
         }
     }
 }
